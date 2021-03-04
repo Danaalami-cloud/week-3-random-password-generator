@@ -8,6 +8,7 @@ function generatePassword() {
   var upperCaseChar = "ABCDEFGHIJKLMNOQPRSTUVWXYZ";
   var numbers = "1234567890";
   var special = "!@£$%^&*()";
+  var characterCollection = ""; 
 
   var lengthRequested = parseInt(prompt("How long would you like your password to be?"));
 
@@ -20,7 +21,20 @@ function generatePassword() {
     return "Try Again"
   }
 
-  return "password"
+  var wantsLowerCase = confirm("Do you want lower case characters?");
+  var wantsUpperCase = confirm("Do you want upper case characters?");
+  var wantsNumbers = confirm("Do you want numbers?");
+  var wantsSpecial = confirm("Do you want special characters?");
+
+  if (wantsLowerCase === true){
+    characterCollection += lowerCaseChar
+  }
+
+  if(wantsUpperCase === true){
+    characterCollection += upperCaseChar
+  }
+
+  return characterCollection
 }
 
 // Write password to the #password input
