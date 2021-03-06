@@ -6,7 +6,7 @@ function generatePassword() {
   var minLength = 8;
   var maxLength = 128;
   var lowerCaseChar = "abcdefghijklmnopqrstuvxyz";
-  var upperCaseChar = "ABCDEFGHIJKLMNOQPRSTUVWXYZ";
+  var upperCaseChar = "ABCDEFGHIJKLMNOPQPRSTUVWXYZ";
   var numbers = "1234567890";
   var special = "!@£$%^&*()";
   var characterCollection = ""; 
