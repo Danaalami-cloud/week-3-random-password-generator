@@ -12,6 +12,7 @@ function generatePassword() {
   var characterCollection = ""; 
 
   var lengthRequested = parseInt(prompt("How long would you like your password to be? Must be more than 8 characters and less than 128"));
+  
 
   if (minLength > lengthRequested) {
     alert("You have entered a number less than 8... please try again!");
