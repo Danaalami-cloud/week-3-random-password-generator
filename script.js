@@ -2,6 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
+  var generatedPassword = ""; 
   var minLength = 8;
   var maxLength = 128;
   var lowerCaseChar = "abcdefghijklmnopqrstuvxyz";
@@ -26,6 +27,8 @@ function generatePassword() {
   var wantsNumbers = confirm("Do you want numbers?");
   var wantsSpecial = confirm("Do you want special characters?");
 
+
+
   if (wantsLowerCase === true){
     characterCollection += lowerCaseChar
   }
@@ -34,7 +37,19 @@ function generatePassword() {
     characterCollection += upperCaseChar
   }
 
-  return characterCollection
+  if(wantsNumbers === true){
+    characterCollection += numbers
+  }
+
+  if (wantsSpecial=== true){
+    characterCollection += special
+  }
+
+  for  (var i = 0; i < lengthRequested; i++ ){
+    generatedPassword += characterCollection[Math.floor(Math.random() * characterCollection.length)]
+  }
+
+  return generatedPassword
 }
 
 // Write password to the #password input
