@@ -10,8 +10,7 @@ function generatePassword() {
   var numbers = "1234567890";
   var special = "!@£$%^&*()";
   var characterCollection = ""; 
-  var placeholder = "secure password";
-
+  
 
   var lengthRequested = parseInt(prompt("How long would you like your password to be? Must be more than 8 characters and less than 128"));
   
@@ -29,6 +28,8 @@ function generatePassword() {
   var wantsUpperCase = confirm("Do you want upper case characters?");
   var wantsNumbers = confirm("Do you want numbers?");
   var wantsSpecial = confirm("Do you want special characters?");
+
+  
 
 
 
@@ -63,11 +64,7 @@ function writePassword() {
   passwordText.value = password;
 }
 
-function securePassword() {
-  var placeholder = securePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = placeholder;
-}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
