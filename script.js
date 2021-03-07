@@ -34,7 +34,7 @@ function generatePassword() {
   
   if (wantsLowerCase === false && wantsUpperCase === false && wantsNumbers === false && wantsSpecial === false) {
     alert("Please select at least one type of character");
-    return "Try Again" 
+    return "Try Again Please" 
 }
 
 
