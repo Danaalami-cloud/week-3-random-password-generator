@@ -24,13 +24,18 @@ function generatePassword() {
     return "Try Again"
   }
 
+  
+
   var wantsLowerCase = confirm("Do you want lower case characters?");
   var wantsUpperCase = confirm("Do you want upper case characters?");
   var wantsNumbers = confirm("Do you want numbers?");
   var wantsSpecial = confirm("Do you want special characters?");
 
   
-
+  if (wantsLowerCase === false && wantsUpperCase === false && wantsNumbers === false && wantsSpecial === false) {
+    alert("Please select at least one type of character");
+    return "Try Again" 
+}
 
 
   if (wantsLowerCase === true){
